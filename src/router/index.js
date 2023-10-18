@@ -4,6 +4,9 @@ import UserIndex from '@/components/Users/Index'
 import UserEdit from '@/components/Users/EditUser'
 import UserShow from '@/components/Users/ShowUser'
 import UserCreate from '@/components/Users/CreateUser'
+import SpeakerIndex from '@/components/SpeakerIndex'
+import SpeakerCreate from '@/components/SpeakerCreate'
+import SpeakerUpdate from '@/components/SpeakerUpdate'
 
 Vue.use(Router)
 
@@ -29,8 +32,21 @@ export default new Router({
       name: 'users',
       component: UserIndex
     },
-
-    
-
+    // เพิ่มรายการเส้นทางสำหรับ Speaker
+    {
+      path: '/speakers',
+      name: 'speakers',
+      component: SpeakerIndex
+    },
+    {
+      path: '/speaker/create',
+      name: 'speaker-create',
+      component: SpeakerCreate
+    },
+    {
+      path: '/speaker/edit/:speakerId',
+      name: 'speaker-edit',
+      component: SpeakerUpdate
+    }
   ]
 })
