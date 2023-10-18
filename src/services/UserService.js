@@ -1,10 +1,10 @@
 import Api from '@/services/Api'
 export default {
     index(search) {
-        return Api().get('users')
+        return Api().get('users')//getall
     },
     show(userId) {
-        return Api().get('user/' + userId)
+        return Api().get('user/' + userId)//get
     },
     post(user) {
         return Api().post('user', user)
@@ -15,4 +15,6 @@ export default {
     delete(user) {
         return Api().delete('user/' + user.id, user)
     },
+    
+    
 }
